@@ -1,0 +1,1 @@
+claude --dangerously-skip-permissions "Leia o arquivo /assets/PROMPT.md e execute todas as instruções contidas nele de forma autônoma e sequencial, sem fazer perguntas, sem pedir confirmações. Tome todas as decisões você mesmo. Ao final, faça o commit e push no GitHub."
