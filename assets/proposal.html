@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proposta Comercial - Somos Produtora</title>
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background: #fff;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 0;
+    page-break-after: always;
+    position: relative;
+    overflow: hidden;
+  }
+  .page:last-child { page-break-after: auto; }
+
+  /* Header & Footer */
+  .page-header {
+    background: #0A0A0A;
+    padding: 12px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+  }
+  .page-header .logo-text {
+    color: #C9A84C;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  .page-header .page-num {
+    color: #666;
+    font-size: 11px;
+  }
+  .page-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #0A0A0A;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+  }
+  .page-footer span {
+    color: #666;
+    font-size: 9px;
+  }
+  .page-footer .gold { color: #C9A84C; }
+
+  .content { padding: 30px 40px 60px 40px; }
+
+  /* Cover Page */
+  .cover {
+    background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 50%, #0A0A0A 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    min-height: 297mm;
+  }
+  .cover .diamond {
+    width: 80px;
+    height: 80px;
+    border: 3px solid #C9A84C;
+    transform: rotate(45deg);
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .cover .diamond-inner {
+    transform: rotate(-45deg);
+    color: #C9A84C;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 2px;
+  }
+  .cover h1 {
+    font-size: 42px;
+    font-weight: 300;
+    letter-spacing: 8px;
+    color: #C9A84C;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .cover .subtitle {
+    font-size: 16px;
+    color: #888;
+    letter-spacing: 4px;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+  .cover .divider {
+    width: 100px;
+    height: 1px;
+    background: #C9A84C;
+    margin: 30px auto;
+  }
+  .cover .project-title {
+    font-size: 22px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .cover .project-sub {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 40px;
+  }
+  .cover .meta {
+    font-size: 11px;
+    color: #555;
+    letter-spacing: 2px;
+  }
+  .cover .meta span { color: #C9A84C; }
+
+  /* Section Headers */
+  h2 {
+    font-size: 24px;
+    color: #0A0A0A;
+    border-bottom: 3px solid #C9A84C;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  h3 {
+    font-size: 16px;
+    color: #0A0A0A;
+    margin: 18px 0 10px 0;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 14px;
+    color: #C9A84C;
+    margin: 12px 0 6px 0;
+    font-weight: 700;
+  }
+  p { margin-bottom: 12px; font-size: 13px; }
+  ul { margin: 0 0 12px 20px; font-size: 13px; }
+  li { margin-bottom: 4px; }
+
+  /* Gold accent */
+  .gold { color: #C9A84C; }
+  .gold-bg { background: #C9A84C; color: #0A0A0A; }
+
+  /* Cards */
+  .module-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 15px 0;
+  }
+  .module-card {
+    background: #F5F5F5;
+    border-radius: 8px;
+    padding: 14px;
+    border-left: 4px solid #C9A84C;
+  }
+  .module-card .num {
+    color: #C9A84C;
+    font-size: 11px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+  .module-card .name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0A0A0A;
+    margin-bottom: 4px;
+  }
+  .module-card .desc {
+    font-size: 10px;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0;
+    font-size: 12px;
+  }
+  th {
+    background: #0A0A0A;
+    color: #C9A84C;
+    padding: 10px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 12px;
+  }
+  tr:nth-child(even) { background: #FAFAFA; }
+
+  /* Stats */
+  .stats-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    margin: 15px 0;
+  }
+  .stat-box {
+    background: #0A0A0A;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-box .value {
+    font-size: 28px;
+    font-weight: 800;
+    color: #C9A84C;
+  }
+  .stat-box .label {
+    font-size: 10px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 4px;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    margin: 15px 0 15px 20px;
+    padding-left: 20px;
+    border-left: 3px solid #C9A84C;
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 14px;
+    padding-left: 15px;
+  }
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: #C9A84C;
+    border-radius: 50%;
+    border: 2px solid #fff;
+  }
+  .timeline-item .day {
+    font-size: 11px;
+    font-weight: 800;
+    color: #C9A84C;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .timeline-item .title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0A0A0A;
+  }
+  .timeline-item .detail {
+    font-size: 11px;
+    color: #666;
+  }
+
+  /* Agent Cards */
+  .agent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 12px 0;
+  }
+  .agent-card {
+    background: #F5F5F5;
+    border-radius: 8px;
+    padding: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .agent-icon {
+    width: 36px;
+    height: 36px;
+    background: #0A0A0A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #C9A84C;
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .agent-info .name {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0A0A0A;
+  }
+  .agent-info .role {
+    font-size: 10px;
+    color: #666;
+    line-height: 1.4;
+  }
+
+  /* Highlight box */
+  .highlight {
+    background: linear-gradient(135deg, #0A0A0A, #1a1a1a);
+    color: #fff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin: 15px 0;
+    border-left: 4px solid #C9A84C;
+  }
+  .highlight h3 { color: #C9A84C; margin-top: 0; }
+  .highlight p { color: #ccc; }
+  .highlight ul { color: #ccc; }
+
+  /* Bar chart */
+  .bar-chart { margin: 15px 0; }
+  .bar-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  .bar-label {
+    width: 140px;
+    font-size: 11px;
+    color: #333;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 12px;
+  }
+  .bar-track {
+    flex: 1;
+    height: 24px;
+    background: #F0F0F0;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #C9A84C, #E8C860);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    color: #0A0A0A;
+  }
+
+  /* Pie chart representation */
+  .pie-section {
+    display: flex;
+    gap: 20px;
+    margin: 12px 0;
+    align-items: center;
+  }
+  .pie-visual {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #C9A84C 0% 35%,
+      #E8C860 35% 55%,
+      #333 55% 75%,
+      #666 75% 88%,
+      #999 88% 100%
+    );
+    flex-shrink: 0;
+  }
+  .pie-legend { font-size: 11px; }
+  .pie-legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .pie-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .section-number {
+    font-size: 48px;
+    font-weight: 800;
+    color: #F0F0F0;
+    position: absolute;
+    right: 40px;
+    top: 70px;
+  }
+
+  .signature-line {
+    border-bottom: 1px solid #333;
+    width: 250px;
+    margin: 40px 0 5px 0;
+  }
+  .signature-label {
+    font-size: 11px;
+    color: #666;
+  }
+
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+  <div class="diamond">
+    <div class="diamond-inner">K</div>
+  </div>
+  <h1>Kameda</h1>
+  <div class="subtitle">Technology Co., Ltd.</div>
+  <div class="divider"></div>
+  <div class="project-title">Proposta de Desenvolvimento</div>
+  <div class="project-sub">Sistema Integrado de Gestao Inteligente</div>
+  <div class="divider"></div>
+  <p class="project-title" style="font-size:18px; color:#C9A84C;">SOMOS PRODUTORA</p>
+  <p class="project-sub">Plataforma SaaS com Inteligencia Artificial</p>
+  <div style="margin-top:40px;">
+    <p class="meta">DOCUMENTO CONFIDENCIAL</p>
+    <p class="meta"><span>Fevereiro 2026</span> | Versao 1.0</p>
+  </div>
+</div>
+
+<!-- PAGE 2: SUMARIO EXECUTIVO -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">02</span>
+  </div>
+  <div class="content">
+    <div class="section-number">01</div>
+    <h2>Sumario Executivo</h2>
+    <p>A <strong>Somos Produtora</strong>, com quase 30 anos de excelencia no mercado audiovisual e comunicacao 360, enfrenta desafios operacionais que limitam seu potencial de crescimento. A prospeccao de clientes e manual, os processos sao fragmentados e a equipe perde horas valiosas em tarefas repetitivas.</p>
+    <p>A <strong>Zhuhai Kameda Technology</strong> propoe o desenvolvimento de um <strong>ecossistema digital completo</strong> que transformara a operacao da Somos Produtora, integrando CRM, ERP, gestao de projetos, geracao de conteudo e agentes de Inteligencia Artificial em uma unica plataforma.</p>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="value">15</div>
+        <div class="label">Modulos Integrados</div>
+      </div>
+      <div class="stat-box">
+        <div class="value">15+</div>
+        <div class="label">Agentes de IA</div>
+      </div>
+      <div class="stat-box">
+        <div class="value">10</div>
+        <div class="label">Dias de Desenvolvimento</div>
+      </div>
+      <div class="stat-box">
+        <div class="value">24/7</div>
+        <div class="label">Operacao Continua</div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <h3>Por que agora?</h3>
+      <ul>
+        <li>A tecnologia de IA atingiu maturidade suficiente para automatizar processos comerciais complexos</li>
+        <li>Concorrentes estao adotando ferramentas digitais — quem nao se adaptar ficara para tras</li>
+        <li>O custo de APIs de IA caiu drasticamente nos ultimos 12 meses</li>
+        <li>A Somos tem quase 3 decadas de expertise — falta apenas a estrutura digital</li>
+      </ul>
+    </div>
+
+    <h3>Resultados Esperados</h3>
+    <div class="bar-chart">
+      <div class="bar-item">
+        <span class="bar-label">Leads Gerados</span>
+        <div class="bar-track"><div class="bar-fill" style="width:90%">+900%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">Tempo Prospeccao</span>
+        <div class="bar-track"><div class="bar-fill" style="width:100%">-100% (Automatico)</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">Tempo Orcamento</span>
+        <div class="bar-track"><div class="bar-fill" style="width:88%">-88%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">Posts por Semana</span>
+        <div class="bar-track"><div class="bar-fill" style="width:85%">+500%</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 3: SOBRE A KAMEDA -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">03</span>
+  </div>
+  <div class="content">
+    <div class="section-number">02</div>
+    <h2>Sobre a Kameda Technology</h2>
+    <p>A <strong>Zhuhai Kameda Technology Co., Ltd.</strong> e uma empresa de tecnologia especializada no desenvolvimento de <strong>sistemas inteligentes, plataformas SaaS e solucoes com Inteligencia Artificial</strong>.</p>
+
+    <h3>Nossa Expertise</h3>
+    <table>
+      <tr>
+        <th>Area</th>
+        <th>Competencia</th>
+      </tr>
+      <tr>
+        <td><strong>Arquitetura de Sistemas</strong></td>
+        <td>Design de plataformas SaaS escalaveis com microsservicos e event-driven architecture</td>
+      </tr>
+      <tr>
+        <td><strong>Inteligencia Artificial</strong></td>
+        <td>Orquestracao de agentes autonomos com CrewAI, LangChain, modelos Claude, GPT-4o e Gemini</td>
+      </tr>
+      <tr>
+        <td><strong>Full-Stack Development</strong></td>
+        <td>Python/FastAPI, Next.js, React Native — stack moderna e performatica</td>
+      </tr>
+      <tr>
+        <td><strong>DevOps & Infraestrutura</strong></td>
+        <td>Docker, CI/CD, monitoramento com Grafana/Prometheus, deploy em Linux</td>
+      </tr>
+      <tr>
+        <td><strong>Automacao Comercial</strong></td>
+        <td>CRMs, ERPs, integracoes com WhatsApp, redes sociais e portais fiscais</td>
+      </tr>
+    </table>
+
+    <h3>Metodologia de Trabalho</h3>
+    <p>Utilizamos <strong>desenvolvimento assistido por IA</strong> com Claude Code, permitindo velocidade de implementacao equivalente a uma equipe de 5+ desenvolvedores. Nossa abordagem combina:</p>
+    <ul>
+      <li><strong>Planejamento detalhado</strong> — documentacao completa antes de qualquer linha de codigo</li>
+      <li><strong>Sprints diarios</strong> — entregas incrementais com validacao contínua</li>
+      <li><strong>Arquitetura modular</strong> — cada modulo funciona independentemente e se integra ao todo</li>
+      <li><strong>Testes automatizados</strong> — cobertura minima de 80% para garantir qualidade</li>
+    </ul>
+
+    <div class="highlight">
+      <h3>Contato</h3>
+      <p><strong>Email:</strong> contato@kameda.com.br</p>
+      <p><strong>Site:</strong> www.kameda.com.br</p>
+      <p><strong>GitHub:</strong> github.com/nhkameda</p>
+      <p><strong>Empresa:</strong> Zhuhai Kameda Technology Co., Ltd.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 4: DIAGNOSTICO -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">04</span>
+  </div>
+  <div class="content">
+    <div class="section-number">03</div>
+    <h2>Diagnostico do Problema</h2>
+    <p>Apos analise detalhada da operacao da <strong>Somos Produtora</strong>, identificamos 8 dores criticas que impactam diretamente a produtividade, receita e crescimento da empresa:</p>
+
+    <table>
+      <tr>
+        <th>#</th>
+        <th>Dor Identificada</th>
+        <th>Impacto</th>
+        <th>Severidade</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td><strong>Prospeccao manual de clientes</strong></td>
+        <td>6+ horas/dia do diretor comercial filtando leads em LinkedIn, Instagram, Google</td>
+        <td style="color:#c00; font-weight:700">CRITICA</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>Outreach fragmentado</strong></td>
+        <td>Mensagens enviadas via WhatsApp, LinkedIn, email sem rastreamento</td>
+        <td style="color:#c00; font-weight:700">CRITICA</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>Sem CRM centralizado</strong></td>
+        <td>Dados de clientes dispersos, sem funil visual, sem historico</td>
+        <td style="color:#c00; font-weight:700">CRITICA</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>Orcamentos manuais</strong></td>
+        <td>2-3 horas por orcamento buscando precos de equipamentos e servicos</td>
+        <td style="color:#e80; font-weight:700">ALTA</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>Sem controle financeiro</strong></td>
+        <td>Margens, impostos e comissoes calculados manualmente em planilhas</td>
+        <td style="color:#e80; font-weight:700">ALTA</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><strong>Sem inventario digital</strong></td>
+        <td>Controle de cameras e equipamentos de memoria / caderno</td>
+        <td style="color:#e80; font-weight:700">ALTA</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>Conteudo manual para clientes</strong></td>
+        <td>Geracao de posts, carrosseis e artigos 100% manual</td>
+        <td style="color:#cc0; font-weight:700">MEDIA</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>Sem gestao de projetos</strong></td>
+        <td>Tarefas e entregas sem acompanhamento estruturado</td>
+        <td style="color:#cc0; font-weight:700">MEDIA</td>
+      </tr>
+    </table>
+
+    <div class="highlight">
+      <h3>Custo Estimado da Ineficiencia</h3>
+      <p>Com base nas dores mapeadas, estimamos que a Somos Produtora perde aproximadamente <strong style="color:#C9A84C">R$ 15.000 a R$ 25.000 por mes</strong> em tempo de equipe desperdicado, oportunidades perdidas e processos manuais — equivalente a <strong style="color:#C9A84C">3 a 5 funcionarios comerciais em tempo integral</strong>.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 5: NOSSA SOLUCAO -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">05</span>
+  </div>
+  <div class="content">
+    <div class="section-number">04</div>
+    <h2>Nossa Solucao</h2>
+    <p>O <strong>Sistema Somos</strong> e uma plataforma all-in-one que integra CRM, ERP, gestao de projetos, geracao de conteudo e agentes de IA em um unico ecossistema digital.</p>
+
+    <h3>Arquitetura de Alto Nivel</h3>
+    <div style="background:#F5F5F5; padding:20px; border-radius:8px; font-family:monospace; font-size:11px; line-height:1.8; margin:12px 0;">
+<pre style="margin:0;">
+ ┌────────────────────────────────────────────────────────────┐
+ │                  SISTEMA SOMOS PRODUTORA                   │
+ ├──────────────┬───────────────┬──────────────┬─────────────┤
+ │  COMERCIAL   │  OPERACOES    │  CONTEUDO    │ ADMINISTR.  │
+ ├──────────────┼───────────────┼──────────────┼─────────────┤
+ │ Hunter IA    │ Gest. Projetos│ Content      │ Financeiro  │
+ │ SDR Auto     │ Contratos     │  Studio      │ Inventario  │
+ │ CRM Pipeline │ Orcamento     │ Social       │ Fornecedores│
+ │              │  Inteligente  │  Scheduler   │ RH/Agentes  │
+ ├──────────────┴───────────────┴──────────────┴─────────────┤
+ │         Intelligence Feed  ·  Analytics & Reports          │
+ ├────────────────────────────────────────────────────────────┤
+ │                    App Android (Mobile)                     │
+ └────────────────────────────────────────────────────────────┘
+</pre>
+    </div>
+
+    <h3>Stack Tecnologica</h3>
+    <table>
+      <tr><th>Camada</th><th>Tecnologia</th></tr>
+      <tr><td>Backend</td><td>Python 3.12 + FastAPI (async)</td></tr>
+      <tr><td>Frontend</td><td>Next.js 15 + TypeScript + Tailwind + ShadcnUI</td></tr>
+      <tr><td>Mobile</td><td>React Native + Expo</td></tr>
+      <tr><td>Banco de Dados</td><td>PostgreSQL 16 + Redis 7 + Qdrant + MinIO</td></tr>
+      <tr><td>Agentes IA</td><td>CrewAI + LangChain (Claude, GPT-4o, Gemini, DALL-E 3)</td></tr>
+      <tr><td>Infraestrutura</td><td>Docker + Nginx + Ubuntu 22.04 LTS</td></tr>
+      <tr><td>CI/CD</td><td>GitHub Actions</td></tr>
+      <tr><td>Monitoramento</td><td>Grafana + Prometheus + Sentry</td></tr>
+    </table>
+
+    <div class="stats-row">
+      <div class="stat-box">
+        <div class="value" style="font-size:18px;">FastAPI</div>
+        <div class="label">Performance Async</div>
+      </div>
+      <div class="stat-box">
+        <div class="value" style="font-size:18px;">Next.js 15</div>
+        <div class="label">UI Moderna</div>
+      </div>
+      <div class="stat-box">
+        <div class="value" style="font-size:18px;">CrewAI</div>
+        <div class="label">Multi-Agentes</div>
+      </div>
+      <div class="stat-box">
+        <div class="value" style="font-size:18px;">Docker</div>
+        <div class="label">Containerizado</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 6: ARQUITETURA -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">06</span>
+  </div>
+  <div class="content">
+    <div class="section-number">05</div>
+    <h2>Arquitetura Tecnologica</h2>
+
+    <div style="background:#F5F5F5; padding:20px; border-radius:8px; font-family:monospace; font-size:10px; line-height:1.6; margin:12px 0;">
+<pre style="margin:0;">
+┌─────────────────────────────────────────────────────────────────┐
+│                         CLIENTES                                 │
+│               Browser / App Mobile / WhatsApp                    │
+└──────────────────────────┬──────────────────────────────────────┘
+                           │ HTTPS / WSS
+                    ┌──────▼──────┐
+                    │    NGINX    │  Reverse Proxy + SSL + Cache
+                    └──────┬──────┘
+                           │
+              ┌────────────┼────────────┐
+              │            │            │
+      ┌───────▼─────┐ ┌───▼───┐ ┌─────▼─────┐
+      │  Next.js 15 │ │FastAPI│ │   MinIO   │
+      │  Dashboard  │ │  API  │ │  Storage  │
+      │   (SSR)     │ │(Async)│ │   (S3)    │
+      └─────────────┘ └───┬───┘ └───────────┘
+                           │
+           ┌───────────────┼───────────────┐
+           │               │               │
+   ┌───────▼──────┐ ┌─────▼─────┐ ┌───────▼──────┐
+   │ PostgreSQL   │ │   Redis   │ │   Qdrant     │
+   │ 16 (Main DB) │ │ 7 (Cache) │ │  (Vector)    │
+   └──────────────┘ └───────────┘ └──────────────┘
+                           │
+                    ┌──────▼──────┐
+                    │   CrewAI    │  Agent Orchestrator
+                    │  LangChain  │  15+ Agents
+                    └──────┬──────┘
+                           │
+   ┌───────────┬───────────┼───────────┬───────────┐
+   │           │           │           │           │
+┌──▼──┐  ┌────▼──┐  ┌────▼──┐  ┌────▼──┐  ┌────▼──┐
+│Claude│  │GPT-4o │  │Gemini │  │DALL-E │  │ APIs  │
+│ API  │  │ API   │  │ API   │  │  3    │  │Externas│
+└──────┘  └───────┘  └───────┘  └───────┘  └───────┘
+</pre>
+    </div>
+
+    <h3>Fluxo de Dados</h3>
+    <div style="background:#F5F5F5; padding:15px; border-radius:8px; font-family:monospace; font-size:10px; line-height:1.6; margin:12px 0;">
+<pre style="margin:0;">
+Hunter IA ──▶ Leads ──▶ SDR IA ──▶ Qualified ──▶ CRM Pipeline
+                                                      │
+                                               ┌──────▼──────┐
+                                               │  Reuniao     │
+                                               │  (Humano)    │
+                                               └──────┬──────┘
+                                                      │
+                              ┌────────────────┬──────▼──────┐
+                              │                │             │
+                       ┌──────▼──────┐  ┌─────▼─────┐ ┌────▼────┐
+                       │  Contratos  │  │ Orcamento │ │ Projeto │
+                       └──────┬──────┘  └───────────┘ └────┬────┘
+                              │                            │
+                       ┌──────▼──────┐              ┌─────▼─────┐
+                       │ Financeiro  │              │  Content  │
+                       │    ERP      │              │  Studio   │
+                       └─────────────┘              └───────────┘
+</pre>
+    </div>
+
+    <h3>Seguranca</h3>
+    <table>
+      <tr><th>Camada</th><th>Implementacao</th></tr>
+      <tr><td>Autenticacao</td><td>JWT + Refresh Tokens + bcrypt</td></tr>
+      <tr><td>Autorizacao</td><td>RBAC (Admin, Diretor, Comercial, Agente_IA, Cliente)</td></tr>
+      <tr><td>Criptografia</td><td>AES-256 (repouso) + TLS 1.3 (transito)</td></tr>
+      <tr><td>LGPD</td><td>Consentimento, exclusao, portabilidade, DPO</td></tr>
+      <tr><td>Auditoria</td><td>Log de todas as acoes sensiveis</td></tr>
+    </table>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 7: MODULOS PARTE 1 -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">07</span>
+  </div>
+  <div class="content">
+    <div class="section-number">06</div>
+    <h2>Os 15 Modulos do Sistema</h2>
+    <p>Cada modulo e independente mas integrado ao ecossistema, permitindo ativacao progressiva e escalabilidade.</p>
+
+    <div class="module-grid">
+      <div class="module-card">
+        <div class="num">MODULO 01</div>
+        <div class="name">Hunter Intelligence</div>
+        <div class="desc">Agentes de IA que buscam leads em LinkedIn, Google, Instagram, Facebook e YouTube por segmento</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 02</div>
+        <div class="name">SDR Automation</div>
+        <div class="desc">Agentes que abordam leads via WhatsApp, LinkedIn e email com mensagens personalizadas</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 03</div>
+        <div class="name">CRM Pipeline</div>
+        <div class="desc">Funil comercial visual Kanban com todas as etapas de venda e conversao</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 04</div>
+        <div class="name">Gestao de Contratos</div>
+        <div class="desc">Geracao automatizada de contratos com templates, assinatura digital e versionamento</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 05</div>
+        <div class="name">Gestao de Projetos</div>
+        <div class="desc">Cards de tarefas, sprints e status reports por cliente e tipo de projeto</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 06</div>
+        <div class="name">Financeiro & ERP</div>
+        <div class="desc">Contas a pagar/receber, notas fiscais, margens, impostos e comissoes</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 07</div>
+        <div class="name">Inventario</div>
+        <div class="desc">Controle de cameras, lentes, iluminacao, audio e drones com disponibilidade real</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 08</div>
+        <div class="name">Base de Fornecedores</div>
+        <div class="desc">Banco de freelancers, equipamentos externos e servicos com precos e avaliacoes</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 09</div>
+        <div class="name">Orcamento Inteligente</div>
+        <div class="desc">Gerador de orcamentos com inventario, fornecedores, calculos e PDF profissional</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 10</div>
+        <div class="name">Content Studio</div>
+        <div class="desc">Curadoria de noticias + geracao de textos, imagens e carrosseis por IA</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 11</div>
+        <div class="name">Social Scheduler</div>
+        <div class="desc">Agendamento e publicacao de conteudo em Instagram, Facebook, LinkedIn e YouTube</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 12</div>
+        <div class="name">RH & Agentes</div>
+        <div class="desc">Gestao de equipe humana + agentes IA com metas, avaliacoes e substituicao</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 13</div>
+        <div class="name">Intelligence Feed</div>
+        <div class="desc">Monitoramento de tendencias e oportunidades no mercado audiovisual e comunicacao</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 14</div>
+        <div class="name">Analytics & Reports</div>
+        <div class="desc">Dashboards executivos com KPIs de todos os modulos, graficos e relatorios</div>
+      </div>
+      <div class="module-card">
+        <div class="num">MODULO 15</div>
+        <div class="name">App Android</div>
+        <div class="desc">App mobile para clientes e equipe com notificacoes, tarefas e dashboards</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 8: AGENTES IA -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">08</span>
+  </div>
+  <div class="content">
+    <div class="section-number">07</div>
+    <h2>Ecossistema de Agentes IA</h2>
+    <p>Os agentes de IA sao <strong>funcionarios digitais</strong> que trabalham 24/7, cada um com persona, objetivo e ferramentas especificas.</p>
+
+    <h3>Time Comercial Digital</h3>
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="agent-icon">H1</div>
+        <div class="agent-info">
+          <div class="name">Hunter LinkedIn</div>
+          <div class="role">Busca leads por segmento no LinkedIn (Claude 3.5 Sonnet)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">H2</div>
+        <div class="agent-info">
+          <div class="name">Hunter Google</div>
+          <div class="role">Pesquisa empresas via Google/SerpAPI (GPT-4o)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">H3</div>
+        <div class="agent-info">
+          <div class="name">Hunter Social</div>
+          <div class="role">Monitora Instagram, Facebook, YouTube (Claude 3.5)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">S1</div>
+        <div class="agent-info">
+          <div class="name">SDR WhatsApp</div>
+          <div class="role">Mensagens personalizadas via WhatsApp (Claude 3.5)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">S2</div>
+        <div class="agent-info">
+          <div class="name">SDR LinkedIn</div>
+          <div class="role">Convites e mensagens no LinkedIn (Claude 3.5)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">Q1</div>
+        <div class="agent-info">
+          <div class="name">Qualificador</div>
+          <div class="role">Pontua e qualifica leads por BANT (Claude 3.5)</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Time de Conteudo Digital</h3>
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="agent-icon">C1</div>
+        <div class="agent-info">
+          <div class="name">Content Writer</div>
+          <div class="role">Textos para redes sociais e artigos LinkedIn (Claude)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">C2</div>
+        <div class="agent-info">
+          <div class="name">Image Creator</div>
+          <div class="role">Imagens seguindo brand guidelines (DALL-E 3 / Flux)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">C3</div>
+        <div class="agent-info">
+          <div class="name">News Curator</div>
+          <div class="role">Curadoria de noticias do setor (Gemini Pro)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">C4</div>
+        <div class="agent-info">
+          <div class="name">Trend Analyzer</div>
+          <div class="role">Identifica oportunidades de mercado (Claude 3.5)</div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Time de Suporte Digital</h3>
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="agent-icon">X1</div>
+        <div class="agent-info">
+          <div class="name">Budget Calculator</div>
+          <div class="role">Auxilia construcao de orcamentos (GPT-4o)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">X2</div>
+        <div class="agent-info">
+          <div class="name">Contract Drafter</div>
+          <div class="role">Gera minutas de contratos (Claude 3.5)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">X3</div>
+        <div class="agent-info">
+          <div class="name">Performance Eval.</div>
+          <div class="role">Monitora KPIs dos agentes (Gemini Pro)</div>
+        </div>
+      </div>
+      <div class="agent-card">
+        <div class="agent-icon">X4</div>
+        <div class="agent-info">
+          <div class="name">Report Generator</div>
+          <div class="role">Relatorios automatizados (GPT-4o)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight">
+      <h3>Melhoria Continua</h3>
+      <p>Cada agente e avaliado por metricas de desempenho. Quando um agente acumula falhas, ele e <strong style="color:#C9A84C">desativado e substituido</strong> por uma versao melhorada, incorporando as licoes aprendidas. O time digital nunca para.</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 9: APP ANDROID -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">09</span>
+  </div>
+  <div class="content">
+    <div class="section-number">08</div>
+    <h2>App Android</h2>
+    <p>Aplicativo mobile desenvolvido em <strong>React Native + Expo</strong>, oferecendo acesso ao ecossistema Somos de qualquer lugar.</p>
+
+    <div class="two-col">
+      <div>
+        <h3>Para Clientes</h3>
+        <ul>
+          <li>Acompanhar status do projeto em tempo real</li>
+          <li>Aprovar entregas e materiais diretamente no app</li>
+          <li>Visualizar cronograma e proximos passos</li>
+          <li>Chat direto com a equipe da Somos</li>
+          <li>Receber notificacoes push de atualizacoes</li>
+          <li>Acessar contratos e documentos</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Para a Equipe</h3>
+        <ul>
+          <li>Gerenciar tarefas e atualizar status</li>
+          <li>Receber alertas de novos leads e reunioes</li>
+          <li>Acessar dashboards e KPIs</li>
+          <li>Comunicacao interna por chat</li>
+          <li>Registrar producoes em campo (fotos/videos)</li>
+          <li>Consultar inventario e fornecedores</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Funcionalidades Tecnicas</h3>
+    <table>
+      <tr><th>Feature</th><th>Tecnologia</th></tr>
+      <tr><td>Notificacoes Push</td><td>Firebase Cloud Messaging</td></tr>
+      <tr><td>Modo Offline</td><td>WatermelonDB + MMKV</td></tr>
+      <tr><td>Navegacao</td><td>Expo Router</td></tr>
+      <tr><td>Camera</td><td>Expo Camera</td></tr>
+      <tr><td>Autenticacao</td><td>JWT + Biometria</td></tr>
+      <tr><td>Chat</td><td>WebSocket real-time</td></tr>
+    </table>
+
+    <h3>Infraestrutura do Servidor</h3>
+    <table>
+      <tr><th>Componente</th><th>Especificacao</th></tr>
+      <tr><td>Servidor</td><td>VPS com 8 vCPU, 32GB RAM, 500GB NVMe SSD</td></tr>
+      <tr><td>SO</td><td>Ubuntu 22.04 LTS</td></tr>
+      <tr><td>Containers</td><td>Docker + Docker Compose (12+ containers)</td></tr>
+      <tr><td>Reverse Proxy</td><td>Nginx com SSL via Let's Encrypt</td></tr>
+      <tr><td>Firewall</td><td>UFW + fail2ban + SSH key-only</td></tr>
+      <tr><td>Backup</td><td>pg_dump diario + WAL archiving + Cloudflare R2</td></tr>
+      <tr><td>Monitoramento</td><td>Grafana + Prometheus + Sentry</td></tr>
+      <tr><td>CI/CD</td><td>GitHub Actions (lint > test > build > deploy)</td></tr>
+    </table>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 10: ROADMAP -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">10</span>
+  </div>
+  <div class="content">
+    <div class="section-number">09</div>
+    <h2>Roadmap de Implementacao</h2>
+    <p>Desenvolvimento intensivo em <strong>10 dias</strong>, com entregas diarias validaveis.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="day">Day 0 — Setup</div>
+        <div class="title">Infraestrutura & Fundacao</div>
+        <div class="detail">Docker, PostgreSQL, Redis, Qdrant, MinIO, Auth JWT/RBAC, CI/CD, scaffolds Next.js + FastAPI</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 1 — Core</div>
+        <div class="title">CRM Pipeline</div>
+        <div class="detail">Deals, Contacts, Companies, Board Kanban, Dashboard comercial</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 2 — Core</div>
+        <div class="title">Usuarios & Permissoes</div>
+        <div class="detail">CRUD de usuarios, RBAC completo, dashboard shell, perfis de acesso</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 3 — Core</div>
+        <div class="title">Contratos & Financeiro Base</div>
+        <div class="detail">Geracao de contratos PDF, modulo financeiro basico, NF-e</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 4 — IA</div>
+        <div class="title">Hunter Intelligence</div>
+        <div class="detail">Agentes de prospeccao: LinkedIn, Google, Social media scrapers</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 5 — IA</div>
+        <div class="title">SDR Automation</div>
+        <div class="detail">Agentes de outreach: WhatsApp, LinkedIn messaging, email sequences</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 6 — IA</div>
+        <div class="title">CRM + IA Integration</div>
+        <div class="detail">Lead scoring, qualificacao automatica, integracao Hunter+SDR+CRM</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 7 — Ops</div>
+        <div class="title">ERP & Inventario</div>
+        <div class="detail">Financeiro completo, contas a pagar/receber, inventario de equipamentos</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 8 — Ops</div>
+        <div class="title">Fornecedores & Orcamento</div>
+        <div class="detail">Base de fornecedores, orcamento inteligente, gestao de projetos</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 9 — Content</div>
+        <div class="title">Content Studio & Social</div>
+        <div class="detail">Geracao de conteudo por IA, agendamento de posts, calendario editorial</div>
+      </div>
+      <div class="timeline-item">
+        <div class="day">Day 10 — Final</div>
+        <div class="title">App Android & Integracao</div>
+        <div class="detail">App React Native, dashboards analytics, testes de integracao final</div>
+      </div>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 11: INVESTIMENTO -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">11</span>
+  </div>
+  <div class="content">
+    <div class="section-number">10</div>
+    <h2>Investimento</h2>
+
+    <h3>Desenvolvimento</h3>
+    <table>
+      <tr><th>Item</th><th>Detalhes</th><th>Valor</th></tr>
+      <tr>
+        <td><strong>Desenvolvimento Completo</strong></td>
+        <td>10 dias de desenvolvimento intensivo<br>15 modulos + App Android + Agentes IA</td>
+        <td style="text-align:right; font-weight:700; color:#C9A84C; font-size:16px;">R$ 45.000 - R$ 65.000</td>
+      </tr>
+    </table>
+
+    <h3>Custos Operacionais Mensais</h3>
+    <table>
+      <tr><th>Categoria</th><th>Item</th><th>Custo Mensal</th></tr>
+      <tr><td>Infraestrutura</td><td>VPS 8vCPU / 32GB RAM / 500GB SSD</td><td>R$ 250 - 400</td></tr>
+      <tr><td>Infraestrutura</td><td>Backup externo (Cloudflare R2)</td><td>R$ 30</td></tr>
+      <tr><td rowspan="4">APIs de IA</td><td>Anthropic (Claude 3.5 Sonnet)</td><td>R$ 800 - 1.500</td></tr>
+      <tr><td>OpenAI (GPT-4o + DALL-E 3)</td><td>R$ 500 - 1.000</td></tr>
+      <tr><td>Google AI (Gemini Pro)</td><td>R$ 200 - 500</td></tr>
+      <tr><td>SerpAPI (buscas)</td><td>R$ 250</td></tr>
+      <tr><td>Ferramentas</td><td>Resend (email)</td><td>R$ 100</td></tr>
+      <tr><td>Ferramentas</td><td>Firebase / WhatsApp</td><td>Gratuito</td></tr>
+      <tr style="background:#0A0A0A; color:#fff;">
+        <td colspan="2" style="font-weight:700; color:#C9A84C;">TOTAL MENSAL OPERACIONAL</td>
+        <td style="font-weight:700; color:#C9A84C; text-align:right; font-size:16px;">R$ 2.130 - R$ 3.780</td>
+      </tr>
+    </table>
+
+    <h3>Retorno sobre Investimento (ROI)</h3>
+    <div class="pie-section">
+      <div class="pie-visual"></div>
+      <div class="pie-legend">
+        <div class="pie-legend-item"><div class="pie-dot" style="background:#C9A84C"></div> Economia com equipe comercial (35%)</div>
+        <div class="pie-legend-item"><div class="pie-dot" style="background:#E8C860"></div> Aumento de receita por novos leads (20%)</div>
+        <div class="pie-legend-item"><div class="pie-dot" style="background:#333"></div> Reducao de tempo operacional (20%)</div>
+        <div class="pie-legend-item"><div class="pie-dot" style="background:#666"></div> Melhoria na gestao financeira (13%)</div>
+        <div class="pie-legend-item"><div class="pie-dot" style="background:#999"></div> Geracao de conteudo automatica (12%)</div>
+      </div>
+    </div>
+
+    <table>
+      <tr><th>Metrica</th><th>Antes</th><th>Depois</th><th>Economia/Ganho</th></tr>
+      <tr><td>Equipe comercial equivalente</td><td>3-5 funcionarios</td><td>1 supervisor</td><td style="color:#0a0; font-weight:700">R$ 15.000-25.000/mes</td></tr>
+      <tr><td>Leads por mes</td><td>~50</td><td>500+</td><td style="color:#0a0; font-weight:700">+900%</td></tr>
+      <tr><td>Tempo para orcamento</td><td>2-3 horas</td><td>15 minutos</td><td style="color:#0a0; font-weight:700">-88%</td></tr>
+      <tr style="background:#0A0A0A;">
+        <td colspan="3" style="color:#C9A84C; font-weight:700">Payback Estimado</td>
+        <td style="color:#C9A84C; font-weight:700; font-size:16px;">2-3 meses</td>
+      </tr>
+    </table>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 12: ROI & RESULTADOS -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">12</span>
+  </div>
+  <div class="content">
+    <div class="section-number">11</div>
+    <h2>ROI e Resultados Esperados</h2>
+
+    <h3>Projecao de Impacto — Primeiros 90 Dias</h3>
+    <div class="bar-chart">
+      <div class="bar-item">
+        <span class="bar-label">Leads Gerados</span>
+        <div class="bar-track"><div class="bar-fill" style="width:90%">500+ por mes</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">Taxa Qualificacao</span>
+        <div class="bar-track"><div class="bar-fill" style="width:25%">15-25%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">Reunioes/Semana</span>
+        <div class="bar-track"><div class="bar-fill" style="width:40%">20+</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">Conversao Vendas</span>
+        <div class="bar-track"><div class="bar-fill" style="width:20%">~20%</div></div>
+      </div>
+      <div class="bar-item">
+        <span class="bar-label">Posts/Semana</span>
+        <div class="bar-track"><div class="bar-fill" style="width:75%">50+ por cliente</div></div>
+      </div>
+    </div>
+
+    <h3>Metas por Periodo</h3>
+    <table>
+      <tr><th>Periodo</th><th>Meta</th><th>Indicador de Sucesso</th></tr>
+      <tr><td style="font-weight:700; color:#C9A84C;">30 dias</td><td>Sistema core operacional</td><td>100+ leads/semana, CRM ativo, financeiro basico</td></tr>
+      <tr><td style="font-weight:700; color:#C9A84C;">60 dias</td><td>Todos os modulos ativos</td><td>3+ clientes gerenciados, conteudo sendo gerado</td></tr>
+      <tr><td style="font-weight:700; color:#C9A84C;">90 dias</td><td>ROI positivo</td><td>500+ leads/mes, 10+ clientes, receita > custo</td></tr>
+    </table>
+
+    <h3>Metricas Tecnicas</h3>
+    <table>
+      <tr><th>Metrica</th><th>Meta</th></tr>
+      <tr><td>Uptime do sistema</td><td>99.5%</td></tr>
+      <tr><td>Tempo de resposta API (p95)</td><td>&lt; 200ms</td></tr>
+      <tr><td>Taxa de erro</td><td>&lt; 0.1%</td></tr>
+      <tr><td>Performance dos agentes</td><td>Score 80+ (de 100)</td></tr>
+    </table>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 13: TERMOS -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">13</span>
+  </div>
+  <div class="content">
+    <div class="section-number">12</div>
+    <h2>Termos e Condicoes</h2>
+
+    <h3>Condicoes de Pagamento</h3>
+    <table>
+      <tr><th>Parcela</th><th>Momento</th><th>Valor</th></tr>
+      <tr><td>1a Parcela (40%)</td><td>Assinatura do contrato</td><td>R$ 18.000 - R$ 26.000</td></tr>
+      <tr><td>2a Parcela (30%)</td><td>Entrega do Day 5 (Marco intermediario)</td><td>R$ 13.500 - R$ 19.500</td></tr>
+      <tr><td>3a Parcela (30%)</td><td>Entrega final (Day 10)</td><td>R$ 13.500 - R$ 19.500</td></tr>
+    </table>
+
+    <h3>SLA - Acordo de Nivel de Servico</h3>
+    <ul>
+      <li><strong>Periodo de garantia:</strong> 30 dias apos entrega final para correcao de bugs sem custo adicional</li>
+      <li><strong>Tempo de resposta:</strong> Bugs criticos em ate 4 horas uteis; bugs menores em ate 24 horas uteis</li>
+      <li><strong>Disponibilidade:</strong> Meta de 99.5% de uptime mensal</li>
+      <li><strong>Backup:</strong> Backups diarios automaticos com retencao de 30 dias</li>
+    </ul>
+
+    <h3>Suporte Pos-Entrega</h3>
+    <ul>
+      <li><strong>Primeiro mes:</strong> Suporte incluido — treinamento da equipe, ajustes finos, otimizacoes</li>
+      <li><strong>Manutencao continua:</strong> Disponivel mediante contrato mensal separado (valores a negociar)</li>
+      <li><strong>Evolucoes:</strong> Novos modulos ou funcionalidades mediante orcamento individual</li>
+    </ul>
+
+    <h3>Propriedade Intelectual</h3>
+    <ul>
+      <li>Todo o codigo-fonte desenvolvido sera de <strong>propriedade da Somos Produtora</strong> apos pagamento integral</li>
+      <li>Repositorio GitHub transferido para a conta da Somos apos conclusao</li>
+      <li>Documentacao tecnica completa entregue junto com o sistema</li>
+    </ul>
+
+    <h3>Escopo e Alteracoes</h3>
+    <ul>
+      <li>O escopo deste contrato contempla os 15 modulos e o App Android conforme documentacao</li>
+      <li>Alteracoes de escopo serao avaliadas individualmente com orcamento adicional</li>
+      <li>Pequenos ajustes de UX/UI estao incluidos durante o periodo de desenvolvimento</li>
+    </ul>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+<!-- PAGE 14: ASSINATURA -->
+<div class="page">
+  <div class="page-header">
+    <span class="logo-text">KAMEDA TECHNOLOGY</span>
+    <span class="page-num">14</span>
+  </div>
+  <div class="content" style="padding-top:60px;">
+    <div class="section-number">13</div>
+    <h2>Aceite e Assinatura</h2>
+
+    <p style="margin-bottom:30px;">Pelo presente instrumento, as partes abaixo identificadas concordam com os termos, condicoes e valores apresentados nesta proposta comercial para o desenvolvimento do <strong>Sistema Integrado de Gestao Inteligente — Somos Produtora</strong>.</p>
+
+    <div class="highlight" style="margin-bottom:40px;">
+      <p><strong>Proposta:</strong> Desenvolvimento do Sistema Somos Produtora</p>
+      <p><strong>Valor:</strong> R$ 45.000 - R$ 65.000 (conforme escopo definido)</p>
+      <p><strong>Prazo:</strong> 10 dias uteis apos assinatura</p>
+      <p><strong>Validade desta proposta:</strong> 30 dias a partir de 28/02/2026</p>
+    </div>
+
+    <div class="two-col" style="margin-top:40px;">
+      <div>
+        <h3>CONTRATANTE</h3>
+        <p><strong>Somos Produtora</strong></p>
+        <div class="signature-line"></div>
+        <p class="signature-label">Nome:</p>
+        <div class="signature-line" style="margin-top:20px;"></div>
+        <p class="signature-label">Assinatura</p>
+        <div class="signature-line" style="margin-top:20px;"></div>
+        <p class="signature-label">Data</p>
+      </div>
+      <div>
+        <h3>CONTRATADA</h3>
+        <p><strong>Zhuhai Kameda Technology Co., Ltd.</strong></p>
+        <div class="signature-line"></div>
+        <p class="signature-label">Nome: Kameda</p>
+        <div class="signature-line" style="margin-top:20px;"></div>
+        <p class="signature-label">Assinatura</p>
+        <div class="signature-line" style="margin-top:20px;"></div>
+        <p class="signature-label">Data</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:60px; color:#888; font-size:11px;">
+      <div class="divider" style="width:60px; height:1px; background:#C9A84C; margin:20px auto;"></div>
+      <p><strong style="color:#C9A84C; letter-spacing:3px;">KAMEDA TECHNOLOGY</strong></p>
+      <p>Transformando negocios com Inteligencia Artificial</p>
+      <p>contato@kameda.com.br | www.kameda.com.br | github.com/nhkameda</p>
+    </div>
+  </div>
+  <div class="page-footer">
+    <span>Zhuhai Kameda Technology Co., Ltd.</span>
+    <span class="gold">CONFIDENCIAL</span>
+  </div>
+</div>
+
+</body>
+</html>

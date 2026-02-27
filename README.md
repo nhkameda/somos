@@ -311,7 +311,8 @@ Empresa de tecnologia especializada no desenvolvimento de sistemas inteligentes,
 
 ## 📞 Contato
 
-- **Email:** kameda@kamedate.com
+- **Email:** contato@kameda.com.br
+- **Site:** www.kameda.com.br
 - **Empresa:** Zhuhai Kameda Technology Co., Ltd.
 - **GitHub:** [nhkameda](https://github.com/nhkameda)
 
